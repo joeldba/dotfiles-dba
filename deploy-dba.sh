@@ -2,7 +2,7 @@
 
 # this (shoddily-made) script deploys my builds of dwm, slstatus, st, and dmenu, in addition to my dotfiles and the programs i use
 # it is intended for my own personal use, but you may modify it to your liking and use it on your own system
-# this script assumes you are running it on a freshly-installed Arch-based system that contains a normal user w/ sudo privileges.
+# this script assumes you are running it on a freshly-installed Arch-based system.
 # a working internet connection helps, too!
 # be sure to run chmod +x deploy.sh to make the script executable
 # ONLY run this script inside the dotfiles-dba dir so everything works
@@ -17,12 +17,15 @@ passwd rwt
 echo "now opening /etc/sudoers in vim, you should know what to do (hopefully)."
 sleep 3
 vim /etc/sudoers
+echo "opening /etc/pacman.conf in vim- uncomment the multilib repo in pacman.conf (might already be uncommented in Manjaro, in that case just quit vim. if using Artix, uncomment lib32 as well.)"
+sleep 8
+vim /etc/pacman.conf
 su rwt
 
 echo "installing your programs... answer "y" when necessary"
 sleep 2
 
-# get dependencies + programs
+# get packages from pacman and aur
 sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid picom neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox arc-gtk-theme lxappearance
 
 git clone https://aur.archlinux.org/nerd-fonts-hack.git
@@ -60,8 +63,8 @@ sleep 3
 
 # make ~/.config dir if it didn't exist already
 mkdir ~/.config
-echo "~/.config dir has been made, if it didn't exist already."
-sleep 2
+echo "~/.config dir has been made, if it didn't exist already. this is where the source code for the suckless utilities will live"
+sleep 6
 
 # this section pulls, builds, and installs my builds of dwm, slstatus, st, and dmenu
 # clone the repos:

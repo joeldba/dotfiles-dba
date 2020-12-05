@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # this (shoddily-made) script deploys my builds of dwm, slstatus, st, and dmenu, in addition to my dotfiles
-# the script is meant to be run on a fresh install of Arch or an Arch-based distro
 # to the best of my knowledge, it works (at least on my end!). i don't know how, but it does
 # dependencies are gcc + make, git, libx11, libxcb, libxft, libxinerama, ttf-droid, nerd-fonts-hack (AUR), picom, neofetch, ranger, and vim
 # a working internet connection helps, too!

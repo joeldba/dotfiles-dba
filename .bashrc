@@ -11,7 +11,10 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 alias ls='ls --color=auto'
 export PS1="\[$(tput bold)\]\[\033[01;38;5;9m\][\[$(tput sgr0)\]\[\033[01;38;5;11m\]\u\[$(tput sgr0)\]\[\033[01;38;5;10m\]@\[$(tput sgr0)\]\[\033[01;38;5;12m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[01;38;5;12m\]\w\[$(tput sgr0)\]\[\033[01;38;5;9m\]]\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
 
+# show prompt in window name - change this to whatever you like
 echo -ne "\033]0;rwt@dalia - st\007"
+
+# aliases
 
 alias pi='sudo pacman -S'
 alias pu='sudo pacman -Syu'

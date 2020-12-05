@@ -11,19 +11,6 @@
 echo "you have executed the deploy-dba script, which will begin performing its actions in 10 seconds. if you don't want the script to run for whatever reason, press Ctrl + C now."
 sleep 10
 
-# post-install procedures
-useradd -mG wheel rwt
-passwd rwt
-echo "now opening /etc/sudoers in vim, you should know what to do (hopefully)."
-sleep 3
-vim /etc/sudoers
-echo "opening /etc/pacman.conf in vim- uncomment the multilib repo in pacman.conf (might already be uncommented in Manjaro, in that case just quit vim. if using Artix, uncomment lib32 as well.)"
-sleep 8
-vim /etc/pacman.conf
-cp -r /root/dotfiles-dba /home/rwt/dotfiles-dba
-su rwt
-cd ~/dotfiles-dba/
-
 echo "installing your programs... answer "y" when necessary"
 sleep 2
 

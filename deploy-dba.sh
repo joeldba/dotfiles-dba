@@ -16,7 +16,6 @@ useradd -mG wheel rwt
 passwd rwt
 echo "now opening /etc/sudoers in vim, you should know what to do (hopefully)."
 sleep 3
-
 vim /etc/sudoers
 su rwt
 

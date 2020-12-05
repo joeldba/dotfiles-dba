@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this (shoddily-made) script deploys my builds of dwm, slstatus, st, and dmenu, in addition to my dotfiles
+# this (shoddily-made) script deploys my builds of dwm, slstatus, st, and dmenu, in addition to my dotfiles and the programs i use
 # it is intended for my own personal use, but you may modify it to your liking and use it on your own system
 # this script assumes you are running it on a freshly-installed Arch-based system that contains a normal user w/ sudo privileges.
 # a working internet connection helps, too!
@@ -11,18 +11,46 @@
 echo "you have executed the deploy-dba script, which will begin performing its actions in 10 seconds. if you don't want the script to run for whatever reason, press Ctrl + C now."
 sleep 10
 
-# get dependencies
-sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid picom neofetch ranger vim nitrogen
+# get dependencies + programs
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid picom neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox arc-gtk-theme lxappearance
+
 git clone https://aur.archlinux.org/nerd-fonts-hack.git
 cd nerd-fonts-hack
 makepkg -si
 cd ..
 rm -rf nerd-fonts-hack
 
+git clone https://aur.archlinux.org/minecraft-launcher.git
+cd minecraft-launcher
+makepkg -si
+cd ..
+rm -rf minecraft-launcher
+
+git clone https://aur.archlinux.org/pfetch.git
+cd pfetch
+makepkg -si
+cd ..
+rm -rf pfetch
+
+git clone https://aur.archlinux.org/tty-clock.git
+cd tty-clock
+makepkg -si
+cd ..
+rm -rf tty-clock
+
+git clone https://aur.archlinux.org/cli-visualizer.git
+cd cli-visualizer
+makepkg -si
+cd ..
+rm -rf cli-visualizer
+
+echo "your programs have been installed. beginning deployment of suckless utils..."
+sleep 3
+
 # make ~/.config dir if it didn't exist already
 mkdir ~/.config
-echo "~/.config dir has been made. deploying my suckless builds in 3..."
-sleep 4
+echo "~/.config dir has been made, if it didn't exist already."
+sleep 2
 
 # this section pulls, builds, and installs my builds of dwm, slstatus, st, and dmenu
 # clone the repos:
@@ -75,6 +103,8 @@ sudo cp -v usr/share/vim/vim82/colors/nord.vim /usr/share/vim/vim82/colors/nord.
 cp -rv .config/neofetch ~/.config
 cp -rv .config/picom ~/.config
 cp -rv .config/ranger ~/.config
+cp -rv .config/gtk-3.0 ~/.config
+cp -rv .config/Kvantum ~/.config
 
 # nothing failed... hopefully ;)
 echo "task failed successfully"

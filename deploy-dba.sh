@@ -11,6 +11,18 @@
 echo "you have executed the deploy-dba script, which will begin performing its actions in 10 seconds. if you don't want the script to run for whatever reason, press Ctrl + C now."
 sleep 10
 
+# post-install procedures
+useradd -mG wheel rwt
+passwd rwt
+echo "now opening /etc/sudoers in vim, you should know what to do (hopefully)."
+sleep 3
+
+vim /etc/sudoers
+su rwt
+
+echo "installing your programs... answer "y" when necessary"
+sleep 2
+
 # get dependencies + programs
 sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid picom neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox arc-gtk-theme lxappearance
 

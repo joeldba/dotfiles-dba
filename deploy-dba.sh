@@ -20,7 +20,9 @@ vim /etc/sudoers
 echo "opening /etc/pacman.conf in vim- uncomment the multilib repo in pacman.conf (might already be uncommented in Manjaro, in that case just quit vim. if using Artix, uncomment lib32 as well.)"
 sleep 8
 vim /etc/pacman.conf
+cp -r /root/dotfiles-dba /home/rwt/dotfiles-dba
 su rwt
+cd ~/dotfiles-dba/
 
 echo "installing your programs... answer "y" when necessary"
 sleep 2

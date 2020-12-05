@@ -1,20 +1,25 @@
 #!/bin/bash
 
 # this (shoddily-made) script deploys my builds of dwm, slstatus, st, and dmenu, in addition to my dotfiles
-# to the best of my knowledge, it works (at least on my end!). i don't know how, but it does
-# dependencies are gcc + make, git, libx11, libxcb, libxft, libxinerama, ttf-droid, nerd-fonts-hack (AUR), picom, neofetch, ranger, and vim
+# it is intended for my own personal use, but you may modify it to your liking and use it on your own system
+# this script assumes you are running it on a freshly-installed Arch-based system that contains a normal user w/ sudo privileges.
 # a working internet connection helps, too!
 # be sure to run chmod +x deploy.sh to make the script executable
 # ONLY run this script inside the dotfiles-dba dir so everything works
-
-# stop script if any errors occur
-set -e
 
 # prompt the user that they have executed the script
 echo "you have executed the deploy-dba script, which will begin performing its actions in 10 seconds. if you don't want the script to run for whatever reason, press Ctrl + C now."
 sleep 10
 
-# make ~/.config dir
+# get dependencies
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid picom neofetch ranger vim
+git clone https://aur.archlinux.org/nerd-fonts-hack.git
+cd nerd-fonts-hack
+makepkg -si
+cd ..
+rm -rf nerd-fonts-hack
+
+# make ~/.config dir if it didn't exist already
 mkdir ~/.config
 echo "~/.config dir has been made. deploying my suckless builds in 3..."
 sleep 4

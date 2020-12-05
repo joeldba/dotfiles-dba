@@ -12,7 +12,7 @@ echo "you have executed the deploy-dba script, which will begin performing its a
 sleep 10
 
 # get dependencies
-sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid picom neofetch ranger vim
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid picom neofetch ranger vim nitrogen
 git clone https://aur.archlinux.org/nerd-fonts-hack.git
 cd nerd-fonts-hack
 makepkg -si

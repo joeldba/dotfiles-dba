@@ -2,8 +2,9 @@
 
 # this (shoddily-made) script deploys my builds of dwm, slstatus, st, and dmenu, in addition to my dotfiles and the programs i use
 # it is intended for my own personal use, but you may modify it to your liking and use it on your own system
-# this script assumes you are running it on a freshly-installed Arch-based system.
+# this script assumes you are running it on a freshly-installed Arch-based system, as a normal user with sudo privileges
 # a working internet connection helps, too!
+# uncomment multilib repo in /etc/pacman.conf before running (should already be done for Manjaro users, Artix users need to uncomment the lib32 repo in addition to multilib) 
 # be sure to run chmod +x deploy.sh to make the script executable
 # ONLY run this script inside the dotfiles-dba dir so everything works
 

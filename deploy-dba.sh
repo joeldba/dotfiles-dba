@@ -109,7 +109,7 @@ cp -v .bashrc ~/.bashrc
 cp -v .vimrc ~/.vimrc
 cp -v .xinitrc ~/.xinitrc
 sudo cp -v etc/environment /etc/environment
-sudo cp -v usr/share/vim/vim82/colors/nord.vim /usr/share/vim/vim82/colors/nord.vim
+sudo cp -v usr/share/vim/vim82/colors/gruvbox.vim /usr/share/vim/vim82/colors/gruvbox.vim
 cp -rv .config/neofetch ~/.config
 cp -rv .config/picom ~/.config
 cp -rv .config/ranger ~/.config

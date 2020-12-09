@@ -16,7 +16,7 @@ echo "installing your programs... answer "y" when necessary"
 sleep 2
 
 # get packages from pacman and aur
-sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid noto-fonts-emoji picom neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox papirus-icon-theme lxappearance kvantum-qt5 scrot sxiv zip unzip nvidia-settings
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid terminus-font-otb noto-fonts-emoji picom neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox papirus-icon-theme lxappearance kvantum-qt5 scrot sxiv zip unzip nvidia-settings
 
 git clone https://aur.archlinux.org/gtk-theme-arc-gruvbox-git.git
 cd gtk-theme-arc-gruvbox-git
@@ -24,11 +24,11 @@ makepkg -si
 cd ..
 rm -rf gtk-theme-arc-gruvbox-git
 
-git clone https://aur.archlinux.org/nerd-fonts-hack.git
-cd nerd-fonts-hack
+git clone https://aur.archlinux.org/ttf-ms-fonts.git
+cd ttf-ms-fonts
 makepkg -si
 cd ..
-rm -rf nerd-fonts-hack
+rm -rf ttf-ms-fonts
 
 git clone https://aur.archlinux.org/minecraft-launcher.git
 cd minecraft-launcher

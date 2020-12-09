@@ -108,6 +108,7 @@ cd ~/dotfiles-dba
 cp -v .bashrc ~/.bashrc
 cp -v .vimrc ~/.vimrc
 cp -v .xinitrc ~/.xinitrc
+cp -v .Xdefaults ~/.Xdefaults
 sudo cp -v etc/environment /etc/environment
 sudo cp -v gruvbox.vim /usr/share/vim/vim82/colors/gruvbox.vim
 cp -rv .config/neofetch ~/.config

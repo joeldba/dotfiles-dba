@@ -16,7 +16,13 @@ echo "installing your programs... answer "y" when necessary"
 sleep 2
 
 # get packages from pacman and aur
-sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama xf86-video-fbdev ttf-droid terminus-font-otb picom neofetch ranger cmus htop papirus-icon-theme lxappearance nitrogen kvantum-qt5
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama xf86-video-fbdev ttf-droid picom neofetch ranger cmus htop papirus-icon-theme lxappearance nitrogen kvantum-qt5
+
+git clone https://aur.archlinux.org/nerd-fonts-hack.git 
+cd nerd-fonts-hack
+makepkg -si
+cd ..
+rm -rf nerd-fonts-hack
 
 git clone https://aur.archlinux.org/gtk-theme-arc-gruvbox-git.git
 cd gtk-theme-arc-gruvbox-git

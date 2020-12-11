@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Start X upon login (works only on tty1)
+# start X upon login (works only on tty1)
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
 alias ls='ls --color=auto'
@@ -15,7 +15,6 @@ export PS1="\[$(tput bold)\]\[\033[01;38;5;9m\][\[$(tput sgr0)\]\[\033[01;38;5;1
 echo -ne "\033]0;rwt@dalia - st\007"
 
 # aliases
-
 alias pi='sudo pacman -S'
 alias pu='sudo pacman -Syu'
 alias ps='pacman -Ss'

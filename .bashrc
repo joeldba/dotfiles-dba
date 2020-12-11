@@ -24,3 +24,5 @@ alias pr='sudo pacman -R'
 alias prd='sudo pacman -Rs'
 alias pcc='sudo pacman -Sc'
 alias tty-clock='tty-clock -xcC 1'
+alias mkin="sudo make install"
+alias mkcl="make clean"

@@ -16,13 +16,7 @@ echo "installing your programs... answer "y" when necessary"
 sleep 2
 
 # get packages from pacman and aur
-sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama xf86-video-fbdev ttf-droid terminus-font-otb neofetch ranger cmus htop papirus-icon-theme lxappearance nitrogen kvantum-qt5
-
-git clone https://aur.archlinux.org/gtk-theme-arc-gruvbox-git.git
-cd gtk-theme-arc-gruvbox-git
-makepkg -si
-cd ..
-rm -rf gtk-theme-arc-gruvbox-git
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama xf86-video-fbdev ttf-droid terminus-font-otb neofetch ranger cmus htop arc-gtk-theme papirus-icon-theme lxappearance nitrogen kvantum-qt5
 
 echo "your programs have been installed. beginning deployment of suckless utils..."
 sleep 3
@@ -78,8 +72,8 @@ cd ~/dotfiles-dba
 cp -v .bashrc ~/.bashrc
 cp -v .vimrc ~/.vimrc
 cp -v .xinitrc ~/.xinitrc
+cp -v .Xdefaults ~/.Xdefaults
 sudo cp -v etc/environment /etc/environment
-sudo cp -v gruvbox.vim /usr/share/vim/vim82/colors/gruvbox.vim
 cp -rv .config/neofetch ~/.config
 cp -rv .config/ranger ~/.config
 cp -rv .config/gtk-3.0 ~/.config

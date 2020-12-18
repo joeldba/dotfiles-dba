@@ -16,7 +16,7 @@ echo "installing your programs... answer "y" when necessary"
 sleep 2
 
 # get packages from pacman and aur
-sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama xf86-video-fbdev ttf-droid ttf-hack neofetch ranger cmus htop adapta-gtk-theme papirus-icon-theme lxappearance nitrogen kvantum-qt5
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama xf86-video-fbdev ttf-droid ttf-hack ttf-dejavu neofetch ranger cmus htop adapta-gtk-theme papirus-icon-theme lxappearance nitrogen kvantum-qt5
 
 echo "your programs have been installed. beginning deployment of suckless utils..."
 sleep 3

@@ -109,6 +109,7 @@ cp -v .bashrc ~/.bashrc
 cp -v .vimrc ~/.vimrc
 cp -v .xinitrc ~/.xinitrc
 sudo cp -v etc/environment /etc/environment
+sudo cp -v hybrid.vim /usr/share/vim/vim82/colors/
 cp -rv .config/neofetch ~/.config
 cp -rv .config/ranger ~/.config
 cp -rv .config/gtk-3.0 ~/.config

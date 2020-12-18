@@ -16,7 +16,7 @@ echo "installing your programs... answer "y" when necessary"
 sleep 2
 
 # get packages from pacman and aur
-sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid noto-fonts-emoji ttf-hack ttf-dejavu neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox papirus-icon-theme arc-gtk-theme lxappearance kvantum-qt5 scrot sxiv zip unzip nvidia-settings
+sudo pacman -S xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia ttf-droid noto-fonts-emoji ttf-hack ttf-dejavu neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox papirus-icon-theme adapta-gtk-theme lxappearance kvantum-qt5 scrot sxiv zip unzip nvidia-settings
 
 git clone https://aur.archlinux.org/picom-tryone-git.git
 cd picom-tryone-git

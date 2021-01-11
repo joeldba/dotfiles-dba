@@ -1,4 +1,4 @@
-picom &
-nitrogen --restore &
 slstatus &
+nitrogen --restore &
+picom --experimental-backends &
 exec dwm

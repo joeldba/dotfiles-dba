@@ -8,7 +8,7 @@
 # start X upon login (works only on tty1)
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 
-alias ls='ls --color=auto'
+alias ls='ls -lh --color=auto'
 export PS1="\[$(tput bold)\]\[\033[38;5;9m\][\[$(tput sgr0)\] \[$(tput bold)\]\W\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;9m\]]\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;11m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
 # set name of terminal window
@@ -22,7 +22,6 @@ alias psl='pacman -Qs'
 alias pr='sudo pacman -R'
 alias prd='sudo pacman -Rs'
 alias pcc='sudo pacman -Sc'
-alias tty-clock='tty-clock -xcC 1'
 alias mkin="sudo make install"
 alias mkcl="make clean"
 

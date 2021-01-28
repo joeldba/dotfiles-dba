@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this (shoddily-made) script deploys my builds of dwm, slstatus, st, and dmenu, in addition to my dotfiles and the programs i use
+# this (shoddily-made) script deploys my builds of dwm, slstatus, st, dmenu, and slock, in addition to my dotfiles and the programs i use
 # it is intended for my own personal use, but you may modify it to your liking and use it on your own system
 # this script assumes you are running it on a freshly-installed Arch-based system, as a normal user with sudo privileges
 # a working internet connection helps, too!

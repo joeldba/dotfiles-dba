@@ -32,12 +32,14 @@ git clone https://github.com/joeldba/dwm-dba.git
 git clone https://github.com/joeldba/slstatus-dba.git
 git clone https://github.com/joeldba/st-dba.git
 git clone https://github.com/joeldba/dmenu-dba.git
+git clone https://github.com/joeldba/slock-dba.git
 
 # move them to ~/.config/...
 mv -v dwm-dba/ ~/.config/dwm-6.2
 mv -v slstatus-dba/ ~/.config/slstatus
 mv -v st-dba/ ~/.config/st-0.8.4
 mv -v dmenu-dba/ ~/.config/dmenu
+mv -v slock-dba/ ~/.config/slock-1.4
 
 # ...and install them
 cd ~/.config/dwm-6.2
@@ -59,6 +61,12 @@ make clean
 
 cd ..
 cd dmenu/
+make
+sudo make install
+make clean
+
+cd ..
+cd slock-1.4/
 make
 sudo make install
 make clean

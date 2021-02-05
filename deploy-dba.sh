@@ -101,6 +101,7 @@ cp -rv .config/ranger ~/.config
 cp -rv .config/gtk-3.0 ~/.config
 cp -rv .config/Kvantum ~/.config
 cp -rv .config/picom ~/.config
+chmod +x ~/Scripts/GodWord/GodWord.sh
 
 # nothing failed... hopefully ;)
 echo "deployment finished"

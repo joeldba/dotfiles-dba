@@ -113,12 +113,13 @@ sleep 3
 # deploying dotfiles
 cd ~/dotfiles-dba
 
-cp -v .bashrc ~/.bashrc
+cp -v .zshrc ~/.zshrc
 cp -v .vimrc ~/.vimrc
 cp -v .xinitrc ~/.xinitrc
 cp -v .Xdefaults ~/.Xdefaults
 sudo cp -v etc/environment /etc/environment
 sudo cp -v gruvbox.vim /usr/share/vim/vim82/colors/
+cp -rv Scripts/ ~/
 cp -rv .config/neofetch ~/.config
 cp -rv .config/ranger ~/.config
 cp -rv .config/gtk-3.0 ~/.config

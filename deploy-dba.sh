@@ -16,7 +16,7 @@ echo "installing your programs... answer "y" when necessary"
 sleep 2
 
 # get packages from pacman and aur
-sudo pacman -S zsh opendoas pacman-contrib xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia noto-fonts-emoji ttf-hack ttf-dejavu neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox papirus-icon-theme adapta-gtk-theme lxappearance kvantum-qt5 scrot sxiv zip unzip nvidia-settings zsh-autosuggestions zsh-syntax-highlighting zsh-completions picom
+sudo pacman -S zsh opendoas pacman-contrib xorg-server xorg-xinit libx11 libxcb libxft libxinerama nvidia noto-fonts-emoji ttf-hack ttf-dejavu neofetch ranger cmus htop asciiquarium cmatrix vim nitrogen firefox discord gimp audacity steam virtualbox papirus-icon-theme adapta-gtk-theme lxappearance kvantum-qt5 scrot sxiv zip unzip nvidia-settings zsh-autosuggestions zsh-syntax-highlighting zsh-completions vim-airline vim-airline-themes picom
 
 git clone https://aur.archlinux.org/ttf-ms-fonts.git
 cd ttf-ms-fonts

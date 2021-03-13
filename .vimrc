@@ -7,7 +7,7 @@ set incsearch
 set clipboard=unnamedplus
 
 syntax enable
-colorscheme gruvbox
+colorscheme darkblue 
 hi Normal ctermbg=NONE guibg=NONE
 
 let g:airline_theme='base16'

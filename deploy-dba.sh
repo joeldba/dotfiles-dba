@@ -95,9 +95,11 @@ cp -v .xinitrc ~/.xinitrc
 cp -v .Xdefaults ~/.Xdefaults
 sudo cp -v etc/environment /etc/environment
 cp -rv Scripts/ ~/
+cp -rv .ncmpcpp/ ~/
 cp -rv .config/neofetch ~/.config
 cp -rv .config/ranger ~/.config
 cp -rv .config/gtk-3.0 ~/.config
+cp -rv .config/mpd ~/.config
 cp -rv .config/Kvantum ~/.config
 cp -rv .config/picom ~/.config
 chmod +x ~/Scripts/GodWord/GodWord.sh

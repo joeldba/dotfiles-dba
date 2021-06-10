@@ -1,5 +1,6 @@
 # List of programs:
 * vim
+* zsh (you will also need zsh-autosuggestions & zsh-syntax-highlighting)
 * mpd
 * ncmpcpp
 * neofetch

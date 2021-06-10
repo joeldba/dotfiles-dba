@@ -24,9 +24,6 @@ bindkey  "^[[3~"  delete-char
 
 # aliases
 alias ls="ls -lh --color"
-alias gw="~/Scripts/GodWord/GodWord.sh"
-alias mkin="doas make -j4 install"
-alias mkcl="make clean"
 
 # load plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 

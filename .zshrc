@@ -8,7 +8,7 @@ setopt extendedhistory
 eval $(thefuck --alias)
 
 # vars 
-PROMPT="%B%F{red}[%f%b %B%~%b %B%F{red}]%f%b %F{green}>%f "
+PROMPT="%B%F{yellow}[%f%b %B%T%b %B%F{yellow}]%f%b %B%F{red}[%f%b %B%~%b %B%F{red}]%f%b %F{green}>%f "
 HISTFILE=~/.zsh_history
 HISTSIZE=SAVEHIST=1000
 
@@ -24,10 +24,13 @@ bindkey  "^[[3~"  delete-char
 
 # aliases
 alias ls="ls -lh --color"
+alias wipehistory="rm /home/rwt/.zsh_history"
+alias tty-clock="tty-clock -scxtBC 1"
+alias df="df -h"
 
 # load plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/site-functions/zsh-autosuggestions.zsh 
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
 
 # enable tab-autocomplete menu highlighting
 zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash

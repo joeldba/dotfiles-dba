@@ -24,7 +24,7 @@ bindkey  "^[[3~"  delete-char
 
 # aliases
 alias ls="ls -lh --color"
-alias wipehistory="rm /home/rwt/.zsh_history"
+alias wipehistory="rm ~.zsh_history"
 alias tty-clock="tty-clock -scxtBC 1"
 alias df="df -h"
 
